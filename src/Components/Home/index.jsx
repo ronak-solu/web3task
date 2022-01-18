@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { useCampaignFactoryContract } from "../../hooks";
 
 const Home = () => {
-  const { account, deactivate } = useWeb3React();
+  const { account } = useWeb3React();
   const history = useHistory();
   const campaignFactoryContract = useCampaignFactoryContract();
   const [campaigns,setCampaigns] = useState([]);
@@ -45,7 +45,7 @@ const Home = () => {
   useEffect(() => {
     console.log("🚀 ~ file: index.jsx ~ line 47 ~ Home ~ campaignFactoryContract", campaignFactoryContract)
     if(campaignFactoryContract != null){
-      getCampaigns()
+      getCampaigns();
     }
   }, [campaignFactoryContract]);
 

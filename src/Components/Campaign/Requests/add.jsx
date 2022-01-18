@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Row, Spinner, Table } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Col, Container, Row, Spinner } from "react-bootstrap";
 import { useWeb3React } from "@web3-react/core";
 import { useHistory, useParams } from "react-router-dom";
 import useCampaignContract from "../../../hooks/useCampaignContract";
 import Web3 from "web3";
 
 const AddRequest = () => {
-  const { account, deactivate } = useWeb3React();
+  const { account } = useWeb3React();
   const history = useHistory();
   const { id } = useParams();
   const [description, setDescription] = useState('');

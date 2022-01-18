@@ -6,8 +6,7 @@ import Home from './Components/Home/index.jsx';
 import MetaMaskOnboarding from "@metamask/onboarding";
 import { useWeb3React } from "@web3-react/core";
 
-import { injected, walletconnect, walletLink } from "./utils/connectors";
-import { useEagerConnect, useInactiveListener } from "./hooks";
+import { injected} from "./utils/connectors";
 import View from './Components/Campaign/View';
 import ViewRequest from './Components/Campaign/Requests';
 import AddRequest from './Components/Campaign/Requests/add';

@@ -6,13 +6,13 @@ import useCampaignContract from "../../../hooks/useCampaignContract";
 import Web3 from "web3";
 
 const View = () => {
-  const { account, deactivate } = useWeb3React();
+  const { account } = useWeb3React();
   const history = useHistory();
   const { id } = useParams();
   console.log("🚀 ~ file: index.jsx ~ line 12 ~ View ~ id", id);
   const campaignContract = useCampaignContract({ address: id });
   const [campaignDetails, setCampaignDetails] = useState(null);
-  const [isCreatingNew, setIsCreatingNew] = useState(false);
+  // const [isCreatingNew, setIsCreatingNew] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [amountToContribute, setAmountToContribute] = useState(0);
 

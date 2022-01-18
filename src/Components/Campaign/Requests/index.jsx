@@ -6,7 +6,7 @@ import useCampaignContract from "../../../hooks/useCampaignContract";
 import Web3 from "web3";
 
 const ViewRequest = () => {
-  const { account, deactivate } = useWeb3React();
+  const { account } = useWeb3React();
   const history = useHistory();
   const { id } = useParams();
   const campaignContract = useCampaignContract({ address: id });
